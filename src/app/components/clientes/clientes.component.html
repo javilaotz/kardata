@@ -1,0 +1,36 @@
+<div class="container">
+    <div class="row m-5">
+        <div class="col">
+            <h1 class="text-center">Clientes</h1>
+        </div>
+    </div>
+
+    <div class="row md-5">
+        <div class="col">
+
+            <!-- Cards -->
+            <div class="row row-cols-1 row-cols-md-3">
+                <div *ngFor="let cliente of clientes, let i = index" class="col mb-4">
+                    <!-- [routerLink]="[ '/clientesdetalle', cliente.id] -->
+                    <a class="card carta-general" (click)="clienteDetalle(cliente)">
+                        <div class="card-body no-padding pointer-cursor">
+                            <div class="color-linetitle">
+                                <h5 class="card-title">{{ cliente.fullname | titlecase }}</h5>
+                            </div>
+                            <div class="body-clientes">
+                                <p class="card-text">
+                                    <span>Datos:</span><br>
+                                    <span>Ciudad: {{ cliente.city }}</span><br>
+                                    <span>Dirección: {{ cliente.address_1 }}</span><br>
+                                    <span>Número de documento: {{ cliente.document_number }}</span>
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>

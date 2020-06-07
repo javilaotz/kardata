@@ -1,0 +1,28 @@
+.card-body.no-padding {
+    padding: 0;
+}
+
+.color-linetitle {
+    padding: 10px;
+    background-color: #2A2B2B;
+}
+
+.color-linetitle h5 {
+    margin: 0px;
+    color: #ffffff;
+    font-size: 17px;
+}
+
+.body-clientes {
+    padding: 10px;
+    font-weight: 600;
+    min-height: 145px;
+}
+
+.pointer-cursor {
+    cursor: pointer;
+}
+
+.carta-general {
+    border: 1px solid #c0c0c0;
+}
