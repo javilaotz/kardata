@@ -15,9 +15,9 @@
 
             <!-- Cards -->
             <div class="row row-cols-1 row-cols-md-3">
-                <div *ngFor="let cliente of clientes, let i = index" class="col mb-4">
+                <div *ngFor="let cliente of clientes" class="col mb-4">
                     <!-- [routerLink]="[ '/clientesdetalle', cliente.id] -->
-                    <a class="card carta-general" (click)="clienteDetalle(cliente, i)">
+                    <a class="card carta-general" (click)="clienteDetalle(cliente)">
                         <div class="card-body no-padding pointer-cursor">
                             <div class="color-linetitle">
                                 <h5 class="card-title">{{ cliente.fullname | titlecase }}</h5>
