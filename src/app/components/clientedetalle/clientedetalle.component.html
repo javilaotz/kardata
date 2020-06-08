@@ -1,1 +1,25 @@
-<p>clientedetalle works!</p>
+<div *ngIf="loading" style="width: 100%; padding-top: 50px; text-align: center">
+    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="!loading" class="container">
+    <div class="row m-5">
+        <div class="col">
+            <div class="card carta-general-detalle ">
+                <div class="card-header title-client color-linetitle">
+                    {{ clienteshow.fullname | titlecase }} # {{clienteshow.id}}
+                </div>
+                <div class="card-body">
+                    <p class="card-text">País: {{ clienteshow.country}} </p>
+                    <p class="card-text">Ciudad: {{ clienteshow.city}} </p>
+                    <p class="card-text">Región: {{ clienteshow.region}} </p>
+                    <p class="card-text">Dirección: {{ clienteshow.address_1}} {{ clienteshow.address_2 }}</p>
+                    <p class="card-text">Número de documento: {{ clienteshow.document_type}} {{ clienteshow.document_number }}</p>
+                    <p class="card-text">Branch Código: {{ clienteshow.branch_code }}</p>
+                </div>
+                <button class="btn btn-primary btn-clientedetalle" type="button" [routerLink]="['/clientes']"> Regresar a clientes </button>
+            </div>
+        </div>
+    </div>
+</div>

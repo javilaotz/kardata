@@ -11,7 +11,8 @@ export class ClientesComponent implements OnInit {
 
 
   clientes: any[] = [];
-  cliente: Object = {};
+  cliente: any = {};
+  loading:boolean = true;
 
   constructor(private data: DataService,
               private route: Router) { 
@@ -20,13 +21,14 @@ export class ClientesComponent implements OnInit {
     .subscribe((resp: any) => {
       console.log(resp);
       this.clientes = resp;
+      this.loading = false;
     });
   
   }
 
   clienteDetalle(cliente: Object){
     this.cliente = cliente;
-    this.route.navigateByUrl(`/clientesdetalle`);
+    this.route.navigateByUrl(`/clientesdetalle/${this.cliente.id}`);
   }
 
   ngOnInit(): void {

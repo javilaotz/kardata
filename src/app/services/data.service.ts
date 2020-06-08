@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
-import { map } from 'rxjs/operators';
+import { map, find } from 'rxjs/operators';
 
 
 @Injectable({
@@ -21,6 +21,11 @@ export class DataService {
   cargarClientes(){
     this.clientes = this.getQuery('clients');
     return this.clientes;
+  }
+  
+  detalleCliente(id: any){
+    return this.getQuery('clients');
+  
   }
   
   // cargarPedidos(){

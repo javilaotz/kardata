@@ -1,0 +1,32 @@
+.title-client {
+    font-size: 19px;
+    font-weight: 600;
+}
+
+.color-linetitle {
+    background-color: #2A2B2B;
+    color: #ffffff;
+}
+
+.carta-general-detalle p {
+    margin-bottom: 2px;
+}
+
+.btn-clientedetalle {
+    width: 30%;
+    margin: 0 auto;
+    font-weight: 600;
+    margin-bottom: 20px;
+    background-color: #2A2B2B;
+    border-color: #2A2B2B;
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+}
+
+.btn-clientedetalle:hover {
+    -webkit-transition: all 0.3s linear;
+    transition: all 0.3s linear;
+    background-color: transparent;
+    color: #2A2B2B;
+    border-color: #2A2B2B;
+}

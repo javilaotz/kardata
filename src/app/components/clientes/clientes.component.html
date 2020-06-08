@@ -1,4 +1,9 @@
-<div class="container">
+<div *ngIf="loading" style="width: 100%; padding-top: 50px; text-align: center">
+    <i class="fa fa-circle-o-notch fa-spin fa-3x fa-fw"></i>
+    <span class="sr-only">Loading...</span>
+</div>
+
+<div *ngIf="!loading" class="container">
     <div class="row m-5">
         <div class="col">
             <h1 class="text-center">Clientes</h1>
@@ -12,7 +17,7 @@
             <div class="row row-cols-1 row-cols-md-3">
                 <div *ngFor="let cliente of clientes, let i = index" class="col mb-4">
                     <!-- [routerLink]="[ '/clientesdetalle', cliente.id] -->
-                    <a class="card carta-general" (click)="clienteDetalle(cliente)">
+                    <a class="card carta-general" (click)="clienteDetalle(cliente, i)">
                         <div class="card-body no-padding pointer-cursor">
                             <div class="color-linetitle">
                                 <h5 class="card-title">{{ cliente.fullname | titlecase }}</h5>
